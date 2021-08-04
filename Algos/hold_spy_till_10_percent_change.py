@@ -43,7 +43,10 @@ class Algo(QCAlgorithm):
                 self.Log("SELL SPY @" + str(price))
 
                 self.nextEntryTime = self.Time + self.period`
-                
+
+
+
+
 
 
    
