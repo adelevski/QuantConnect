@@ -1,5 +1,3 @@
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
 class Algo(QCAlgorithm):
 
     def Initialize(self):
@@ -59,8 +57,8 @@ class Tweet(PythonData):
                     result = self.model(tokens)
                     tweet.Value = max([(i+1, r) for i,r in enumerate(result.logits[0])], key=lambda x: x[1])[0]
                     break
-            else:
-                tweet.Value = 3
+                else:
+                    tweet.Value = 3
 
             tweet["Tweet"] = str(content)
         
